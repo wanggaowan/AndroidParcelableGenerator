@@ -1,0 +1,41 @@
+<idea-plugin>
+    <id>com.wanggaowan.plugin.parcelableGenerator</id>
+    <name>AndroidParcelableGenerator</name>
+    <version>1.0</version>
+    <vendor email="wanggaowan@163.com" url="https://github.com/wanggaowan/AndroidParcelableGenerator"/>
+
+    <description><![CDATA[
+      Plugin which generates Android Parcelable boilerplate code for you.
+    ]]></description>
+
+    <change-notes><![CDATA[
+       <ul>
+         <li>base on Android Parcelable Code Generator</li>
+         <li>support android studio 3.0+</li>
+       </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="182"/>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <!--支持android studio4.1+-->
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="generateParcelableNew" class="pl.charmas.parcelablegenerator.ParcelableAction"
+                text="Parcelable"
+                description="Generates Android Parcelable based on class fields">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>

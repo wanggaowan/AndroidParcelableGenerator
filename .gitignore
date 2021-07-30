@@ -1,0 +1,9 @@
+out/
+.idea/
+*.iml
+.DS_Store
+build/
+*.zip
+
+# Build output
+AndroidParcelableGenerator.jar
